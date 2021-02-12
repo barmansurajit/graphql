@@ -1,0 +1,5 @@
+type BankAccount{
+    id: ID!
+    customer: Customer!
+    currency: Currency!
+}
