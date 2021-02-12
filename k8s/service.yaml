@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bank-on-me-svc
+  labels:
+    app: bank-on-me
+    name: bank-on-me-svc
+  namespace: bank
+spec:
+  ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: bank-on-me

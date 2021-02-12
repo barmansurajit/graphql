@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bank-on-me
+  labels:
+    name: bank-on-me
+  namespace: bank
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  minReadySeconds: 0
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: bank-on-me
+  template:
+    metadata:
+      labels:
+        app: bank-on-me
+    spec:
+      containers:
+        - name: bank-on-me
+          image: bank/bank-on-me:latest
+          imagePullPolicy: Never
+          resources:
+            requests:
+              memory: "400Mi"
+              cpu: "200m"
+            limits:
+              memory: "600Mi"
+              cpu: "300m"
+          ports:
+            - containerPort: 8080
