@@ -1,8 +1,9 @@
-package com.learn.graphql.domain;
+package com.learn.graphql.domain.bank;
 
 import lombok.Builder;
 import lombok.Value;
 
+import java.util.List;
 import java.util.UUID;
 
 @Value
@@ -10,5 +11,6 @@ import java.util.UUID;
 public class BankAccount {
     UUID id;
     Customer customer;
+    List<Asset> assets;
     Currency currency;
 }

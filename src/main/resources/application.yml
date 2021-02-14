@@ -2,4 +2,18 @@ spring:
   application:
     name: learn-graphql-java
 
+#voyager:
+#  enabled: false
 
+graphql:
+  servlet:
+    max-query-depth: 10
+    exception-handlers-enabled: true
+  playground:
+    enabled: false
+    headers:
+      Authorization: Bearer TOKEN
+    tabs:
+      - name: Sample bank account query
+        query: classpath:playground/bank_account.graphql
+        variables: classpath:playground/bank_account_vars.json
