@@ -51,3 +51,13 @@ M
 charts/templates/_helpers.tpl,d/a/da72b2ae60996c950e36f438065fc0393a8f7f6b
 A
 charts/Chart.yaml,c/4/c40dde088866d6610fa17e131008f214ae627646
+T
+$charts/templates/serviceaccount.yaml,2/5/25fb07252852c9f88937b12e02f7aba3f0d677e5
+9
+	ReadMe.md,a/2/a225a7e79496c5a1d847c78c3db651eb302ec867
+M
+charts/templates/service.yaml,7/a/7ad60db9dc8296dc9dd474044429cb9574c0d059
+J
+charts/templates/NOTES.txt,a/0/a0da49fc2ccee486e6a37bc83ca18cad7801e0c9
+H
+charts/requirements.yaml,7/b/7b5bef18ccd88bfe66540513461659662d5fc2fd

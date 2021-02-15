@@ -8,7 +8,7 @@ image:
   repository: bank/bank-on-me
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "latest"
 
 imagePullSecrets: []
 nameOverride: "bank-on-me-app"
@@ -38,7 +38,9 @@ securityContext: {}
 
 service:
   type: NodePort
-  port: 8080
+  internalPort: 8080
+  externalPort: 8080
+  name: bank-on-me-service
 
 ingress:
   enabled: false
