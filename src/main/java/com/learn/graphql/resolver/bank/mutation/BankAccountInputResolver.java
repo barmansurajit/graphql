@@ -11,7 +11,7 @@ import java.util.UUID;
 
 @Slf4j
 @Component
-public class BankAccountInput implements GraphQLMutationResolver {
+public class BankAccountInputResolver implements GraphQLMutationResolver {
     public BankAccount createBankAccount(CreateBankAccountInput createBankAccountInput){
         log.info("Creating a bank account for {}", createBankAccountInput);
         return BankAccount.builder()
