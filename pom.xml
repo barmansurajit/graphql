@@ -15,6 +15,9 @@
         <graphql.extended.scalars.version>1.0.1</graphql.extended.scalars.version>
         <lombok.version>1.18.12</lombok.version>
         <sonar.plugin.version>3.7.0.1746</sonar.plugin.version>
+        <sonar.projectKey>barmansurajit_graphql</sonar.projectKey>
+        <sonar.organization>barmansurajit</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <code.coverage.exclusions>
             **/com/learn/graphql/Application.java
         </code.coverage.exclusions>
@@ -67,10 +70,12 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.2.6.RELEASE</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
                 <configuration>
                     <showDeprecation>true</showDeprecation>
                     <compilerVersion>${java.version}</compilerVersion>
@@ -88,9 +93,6 @@
                 <sonar.sources>.</sonar.sources>
                 <sonar.inclusions>src/main/java/**,src/main/resources/**</sonar.inclusions>
                 <sonar.exclusions>${code.coverage.exclusions}</sonar.exclusions>
-                <sonar.projectKey>barmansurajit_graphql</sonar.projectKey>
-                <sonar.organization>barmansurajit</sonar.organization>
-                <sonar.host.url>https://sonarcloud.io</sonar.host.url>
             </properties>
             <activation>
                 <activeByDefault>false</activeByDefault>
