@@ -1,6 +1,6 @@
 FROM adoptopenjdk/openjdk11:alpine-jre
 
-ARG JAR_FILE=target/bank-on-me.jar
+ARG JAR_FILE=~/work/graphql/graphql/target/bank-on-me.jar
 
 WORKDIR /opt/app
 
