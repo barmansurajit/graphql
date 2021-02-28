@@ -61,8 +61,10 @@ jobs:
           name: artifact
       - name: Copy artifact to target folder
         run: |
-          mkdir -p graphql/target
-          mv artifact/bank-on-me.jar graphql/target
+          mkdir -p ~/work/graphql/graphql/target
+          ls -all ~/work/graphql/graphql
+          mv ~/work/graphql/graphql/bank-on-me.jar ~/work/graphql/graphql/target
+          ls -all ~/work/graphql/graphql/target
       - name: Push to GitHub Packages
         uses: docker/build-push-action@v2
         with:
